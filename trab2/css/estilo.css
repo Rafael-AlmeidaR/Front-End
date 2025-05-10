@@ -126,6 +126,7 @@ nav {
     background: var(--emphasis);
     display: flex;
     flex-flow: column;
+    margin-top: 100px;
 }
 #highlights {
     margin-top: 100px;
