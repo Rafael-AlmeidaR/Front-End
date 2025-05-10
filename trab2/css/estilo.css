@@ -204,3 +204,6 @@ nav {
 .client-review {
     margin-bottom: auto;
 }
+ul {
+    margin-bottom: 0;
+}
