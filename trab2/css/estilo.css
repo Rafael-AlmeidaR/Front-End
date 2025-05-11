@@ -34,6 +34,7 @@ header {
     top: 0;
     background: var(--emphasis);
     z-index: 1;
+    height: auto;
 }
 nav {
     width: 100%;
@@ -208,4 +209,12 @@ nav {
 }
 ul {
     margin-bottom: 0;
+}
+li {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: -10px;
+}
+li a {
+    margin-top: 10px;
 }
