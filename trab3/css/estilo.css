@@ -1,0 +1,257 @@
+:root {
+    --background: #F7F9FC;
+    --emphasis: #FF6B6B;
+    --text-color: #1E1E1E;
+    --border: lightgray;
+    --scolor: #FFD93D;
+    /* #6BFF95 */
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    border: 0;
+    list-style: none;
+    color: var(--text-color);
+    scroll-behavior: smooth;
+    font-family: "Montserrat", sans-serif;    
+    font-size: 16px;
+}
+/* section {
+    min-height: 100vh;
+} */
+body
+{   background-color: var(--background);
+}
+a {
+    text-decoration: none;
+    color: black;
+    background: var(--emphasis);
+}
+header {
+    position: sticky;
+    top: 0;
+    background: var(--emphasis);
+    z-index: 1;
+    height: auto;
+}
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--emphasis);
+}
+#search-box {
+   border-radius: 10px; 
+   flex: 0.7;
+   background: white;
+   min-width: 80px;
+}
+#search-box input {
+    background: white;
+    outline: none;
+    width: 95%;
+    min-width: 30px;
+}
+#search-icon {
+    background: white;
+    /* position: fixed; */
+    height: 30px;
+    border-left: 1px solid var(--border);
+}
+#search-bar {
+    flex-flow: nowrap;
+    display: flex;
+    background: white;
+    padding: 8px;
+    border-radius: 6px; 
+    width: 100%;
+}
+#logo {
+    width: 100px;
+    background-color: var(--emphasis);
+}
+#head-container {
+    width: 80%;
+    margin-left: 10%;
+}
+#section-1 {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-margin-top: 200px;
+}
+.container {
+    display: flex;
+    width: 80%;
+    margin-top: 3%;
+    justify-content: center;
+    flex-direction: row;
+    flex-flow: wrap;
+    gap: 2%;
+}
+.cube {
+    margin-top: 2%;
+    background: white;
+    width: 250px;
+    text-align: center;
+    padding: 1%;
+    border: 1px solid var(--border);
+}
+.cube img {
+    width: 100%;
+    height: 70%;
+    border-bottom: 1px solid var(--border);
+}
+
+.cube-p {
+    text-decoration: line-through;
+    opacity: 0.7;
+    font-size: 13px;
+}
+.cube p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.cube button {
+    background: var(--scolor);
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+.nav-button {
+    background: var(--scolor);
+    padding: 10px;
+    border-radius: 10px;
+}
+#about-us {
+    background: var(--emphasis);
+    display: flex;
+    flex-flow: column;
+    margin-top: 100px;
+    scroll-margin-top: 200px;
+}
+#highlights {
+    margin-top: 100px;
+}
+#logo-c {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#about-us h2 b{
+    font-size: 30px;
+}
+#about-us div {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 10px 2%;
+}
+#about-us div div {
+    margin: 10px 5%;
+    display: flex;
+    flex: 1 1 300px;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+}
+#about-us div p {
+    margin: 0 6px;
+}
+#rights {
+    width: 100%;
+    display: flex;
+    background: var(--scolor);
+    margin: 0;
+    padding: 10px 0;
+    justify-content: center;
+}
+#reviews {
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 100px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    scroll-margin-top: 200px;
+}
+#reviews h2 {
+    margin-bottom: 30px;
+}
+#reviews-big-container {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    flex-flow: row wrap;
+}
+.client {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.client-container {
+    width: 100%;
+    border: 1px solid #c1c1c1;
+    padding: 10px;
+    border-bottom: 6px solid black;
+    border-radius: 10px;
+}
+#reviews img {
+    height: 20px;
+}
+.region {
+    margin-bottom: 6px;
+    margin-top: -15px;
+    opacity: 0.5;
+    border-bottom: 1px solid var(--border);
+}
+.client-review {
+    margin-bottom: auto;
+}
+ul {
+    margin-bottom: 0;
+}
+li {
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: -10px;
+}
+li a {
+    margin-top: 10px;
+}
+#section-2 {
+    display: grid;  
+    justify-content: center;
+    grid-template-columns: 50% 50%;
+    margin-top: 50px;
+}
+#section-2 img {
+    margin-top: 50px;
+    width: 400px;
+}
+fieldset {
+    border: 1px solid;
+    max-height: 300px;
+    text-align: center;
+    height: auto;
+}
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    text-align: left;
+}
+form input {
+    height: 40px;
+}
+
+@media (width < 810px){
+    #section-2 {
+        grid-template-columns: 100%;
+        row-gap: 20px;
+    }
+}
