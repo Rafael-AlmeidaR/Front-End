@@ -102,8 +102,6 @@ nav {
     border: 1px solid var(--border);
 }
 .cube img {
-    width: 100%;
-    height: 70%;
     border-bottom: 1px solid var(--border);
 }
 
