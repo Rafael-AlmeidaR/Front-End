@@ -204,7 +204,7 @@ nav {
 .region {
     margin-bottom: 6px;
     margin-top: -15px;
-    opacity: 0.5;
+    opacity: 0.9;
     border-bottom: 1px solid var(--border);
 }
 .client-review {
@@ -252,4 +252,8 @@ form input {
         grid-template-columns: 100%;
         row-gap: 20px;
     }
+}
+
+.hidden {
+    display: none;
 }
