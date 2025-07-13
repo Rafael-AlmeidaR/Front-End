@@ -12,8 +12,11 @@
 </head>
 <body>
     <header>
-        <nav id="head-container">
-            <a href="#section-1"><img loading="lazy" src="imgs/logo2.webp" alt="logo.webp" id="logo"></a>
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container-fluid">
+      <!-- Logo e busca -->
+      <div id="left-c">
+        <a href="#section-1"><img loading="lazy" src="imgs/logo2.webp" alt="logo.webp" id="logo"></a>
             <div id="search-box">
                 <div id="search-bar">
                     <label for="site-search" id="search-text">Pesquisar:</label>
@@ -21,14 +24,28 @@
                     <img loading="lazy" src="imgs/search.webp" alt="search icon" id="search-icon">
                 </div>
             </div>
-            <ul>
-                <li>
-                    <a href="#about-us" class="nav-button">Sobre nós</a>
-                    <a href="#reviews" class="nav-button">Reviews</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+        </div>
+
+      <!-- Botão hambúrguer para mobile -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Menu de navegação -->
+      <div class="collapse navbar-collapse" id="navbarMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#section-1">Promoções</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">Avaliações</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section-2">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section-4">Grid</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section-5">carrossel</a></li>
+          <li class="nav-item"><a class="nav-link" href="#section-6">Animação</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
     <main>
         <section id="section-1">
             <h2>Promoções</h2>
@@ -74,7 +91,7 @@
                     <img width="225" height="225" loading="lazy" src="imgs/cubo_06.webp" alt="cubo pyraminx">
                     <p class="cube-n">Cubo 13x13x13 Profissional</p>
                     <p class="cube-po">R$ 1399,90</p>
-                    <button>Comprar</button>
+                    <button>Comprar</button>canvas.width*.1
                 </div>
                 <div class="cube">
                     <img width="225" height="225" loading="lazy" src="imgs/cubo_07.webp" alt="cubo pyraminx">
@@ -84,13 +101,13 @@
                 </div>
                 <div class="cube">
                     <img width="225" height="225" loading="lazy" src="imgs/cubo_08.webp" alt="cubo pyraminx">
-                    <p class="cube-n">Cubo gan 14 maglev galaxy</p>
+                    <p class="cube-n">Cubo gan 14canvas.width*.1 maglev galaxy</p>
                     <p class="cube-po">R$ 39,99</p>
                     <button>Comprar</button>
                 </div>
             </div>
         </section>
-        <section>
+        <section id="reviews-s">
             <div id="reviews"> 
                 <h2>Avaliações dos Clientes</h2>
                 <div id="reviews-big-container">
@@ -156,6 +173,86 @@
                 </form>
             </fieldset>
         </section>
+        <section id="section-4">
+            <div id="imagens">
+                <div id="Pimagem"></div>
+                <div id="Simagem"></div>
+                <div id="Timagem"></div>
+                <div id="Qimagem"></div>
+                <div id="QIimagem"></div>
+            </div>
+        </section>
+        <section id="section-5">
+            <div id="carousel-tabela" class="container my-5" style="max-width: 300px;">
+                <h2 class="mb-4 text-center">Galeria de Produtos</h2>
+            
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="imgs/cubo_01.webp"  width="300px" height="300px" class="d-block w-100" alt="Cubo 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imgs/cubo_02.webp"  width="300px" height="300px" class="d-block w-100" alt="Cubo 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imgs/cubo_03.webp" width="300px" height="300px" class="d-block w-100" alt="Cubo 3">
+                    </div>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="mb-4 text-center">Tabela de Preços</h2>
+            <div class="table-responsive">
+              <table class="table table-striped table-bordered table-hover text-center align-middle">
+                <thead class="table-dark">
+                  <tr>
+                    <th>Produto</th>
+                    <th>Descrição</th>
+                    <th>Preço Original</th>
+                    <th>Preço com Desconto</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Cubo Mágico 3x3</td>
+                    <td>Ideal para iniciantes e profissionais</td>
+                    <td>R$ 29,99</td>
+                    <td>R$ 19,99</td>
+                  </tr>
+                  <tr>
+                    <td>Cubo 4x4</td>
+                    <td>Desafio intermediário para cubistas</td>
+                    <td>R$ 189,99</td>
+                    <td>R$ 139,99</td>
+                  </tr>
+                  <tr>
+                    <td>Megaminx</td>
+                    <td>Com design profissional e cores vibrantes</td>
+                    <td>R$ 459,99</td>
+                    <td>R$ 399,99</td>
+                  </tr>
+                </tbody>
+                <tfoot class="table-light">
+                  <tr>
+                    <td colspan="4">* Todos os preços podem sofrer alterações</td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </section>
+          <section id="section-6">
+                <div style="height: 400px;">
+                    <div id="transition"></div>
+                </div>
+                <div id="animation">
+                    <div id="snake-head"></div>
+                    <div id="snake-body-1"></div>
+                    <div id="snake-body-2"></div>
+                    <div id="snake-body-3"></div>
+                    <div id="snake-body-4"></div>
+                </div>
+          </section>
+                   
     </main>
     <footer id="about-us">
         <div>
@@ -176,9 +273,8 @@
 </body>
 </html>
 <!-- 
-Adicionar 1 formulário com pelo menos 5 campos de tipos diferentes e uma figura grande ao lado. 
-Em telas grandes os formulário deve ficar ao lado da figura. Em telas menores o formulário deve ficar abaixo da figura. 
-O formulário deve ser bem estruturados, com labels, fieldsets e tipos de campos corretos 
-(e-mail para e-mail, date para data, etc). Utilizar grid para organizar os elementos dos formulários.
 
+    animation-timeline: view
+
+    
 -->
