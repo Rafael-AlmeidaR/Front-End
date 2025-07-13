@@ -21,13 +21,21 @@
 }
 section {
     min-height: 100vh;
-    animation: linear chega both;
+    animation-name: slide; /* nome da animação */
+    animation-duration: 1s;  /* tempo da animação */
+    animation-timing-function: linear;
+    animation-fill-mode: both;
     animation-timeline: view();
     animation-range: cover 0% cover 50%;
 }
-@keyframes chega {
-    0% { transform:translateY(10%) }
-    100% { transform:translateY(0%) }
+
+@keyframes slide {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
 }
 
 body
