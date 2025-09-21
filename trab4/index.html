@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dióxido de Silício</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="margin: 0;">
+    <header>
+        <h1>Dióxido de Silício</h1>
+        <nav>
+            <a href="#informations">Informações</a>
+            <a href="#container">Questionário</a>
+        </nav>
+    </header>
+    <main>
+        <section id="informations">
+            <h2>Informações</h2>
+                <ul>
+                    <li><p>
+                        Nome químico: dióxido de silício
+                    </p></li>
+                    <li>
+                        <p>Nome usual: Silícia</p>
+                    </li>
+                    <li>
+                        <p>Fórmula química: SiO₂</p>
+                    </li>
+                    <li>
+                        <p>Estado físico à temperatura ambiente: Sólido.</p>
+                    </li>
+                    <li>
+                        <p>Ponto de fusão: 1.710 °C.</p>
+                    </li>
+                    <li>
+                        <p>Ponto de ebulição: 3.265 °C.</p>
+                    </li>
+                    <li>
+                        <p>Densidade: 2.65 g/cm³</p>
+                    </li>
+                </ul>
+            <img src="img/molecula.png" width="200" alt="molecula do dióxido de silício">
+        </section>
+        <section id="container">
+            <h2>Questionário</h2>
+            <div id="quest-container">
+                <p>Onde o Dióxido de Silício é encontrado na natureza?</p>
+                <div class="button-container">
+                    <button type="button" id="p0r1" onclick="verifica([0, 1])">Em areia</button>
+                    <button type="button" id="p0r2" onclick="verifica([0, 2])">Em minerais metálicos raros</button>
+                    <button type="button" id="p0r3" onclick="verifica([0, 3])">Em lagos de sal</button>
+                    <button type="button" id="p0r4" onclick="verifica([0, 4])">Todas as anteriores</button>
+                </div>  
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div style="margin-left: 10%;">
+            <p>Aluno: Rafael Almeida Rosa</p>
+            <p>Número de matrícula: 2024323477</p>
+            <p>Turma: 2C</p>
+        </div>
+        <hr>
+        <div style="margin-right: 5%;">
+            <p>Professores: Tiago Lopes Telecken e Nicolle Ruppenthal</p>
+            <p>Matérias: Front-End e Química</p>
+            <ul>
+                Referências:
+                <li><a href="https://brasilescola.uol.com.br/quimica/silicio.htm#Resumo+sobre+o+sil%C3%ADcio" target="_blank">Brasil Escola</a></li>
+                <li><a href="https://avanziquimica.com.br/blog/blog-p/cuidados-produtos-quimicos/tudo-sobre-o-dioxido-de-silicio-silica-aplicacoes-uso-seguro-e-cuidados?utm_source=chatgpt.com" target="_blank">AvanzQuimica</a></li>
+            </ul>
+        </div>
+    </footer>
+<!-- https://brasilescola.uol.com.br/quimica/silicio.htm#Resumo+sobre+o+sil%C3%ADcio
+ https://avanziquimica.com.br/blog/blog-p/cuidados-produtos-quimicos/tudo-sobre-o-dioxido-de-silicio-silica-aplicacoes-uso-seguro-e-cuidados?utm_source=chatgpt.com
+-->
+    <script src="js/script.js"></script>
+</body>
+</html>

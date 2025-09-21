@@ -1,0 +1,167 @@
+html {
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+section {
+    margin: 10px;
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    width: 80%;
+    background-color: white;
+    scroll-margin-top: 100px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-flow: column nowrap;
+    background-color: rgb(247, 247, 247);
+    min-height: 100vh;
+}
+
+.button-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 0.5%;
+}
+
+button {
+    width: 49%;
+    color: white;
+    background-color: #078a85;
+    border: none;
+    height: 50px;
+    margin-bottom: 0.5%;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition-property: width, height;
+    transition-duration: 0.5s, 0.5s; 
+}
+
+button:hover {
+    cursor: pointer;
+    height: 53px;
+    width: 50%;
+}   
+
+
+#quest-container p {
+    margin-left: 15%;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+section p {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+button:disabled:hover {
+  transition-property: none;
+  width: 49%;   
+  height: 50px; 
+  cursor: not-allowed;
+}
+
+.continue {
+    width: 49%;
+    margin-left: 25%;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: black;
+    margin: 0;
+    height: 100px;
+    color: white;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    z-index: 1;
+
+}
+
+nav {
+    margin-left: auto;
+    display: flex;
+    justify-content: end;
+    gap: 16px;
+    flex-flow: row wrap;
+    margin-right: 5%;
+}
+
+footer {
+    background: black;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 100px;
+}
+
+h1 {
+    min-width: 100px;
+    margin-left: 1%;
+}
+
+.wrong-answer {
+    background-color: #e74c3c;
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+#container p {
+    font-size: 26px;
+}
+
+#container div {
+    border-bottom: 1px solid rgb(200, 200, 200);
+}
+
+h2 {
+    font-size: 30px;
+    margin-left: 40%;
+}
+
+footer p {
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+a:hover {
+    font-size: 22px;
+    color: #8a8a8a;
+}
+
+@media (width < 850px) {
+    h2 {
+        margin-left: 35%;
+    }
+}
+
+@media (width < 500px) {
+    h2 {
+        margin-left: 25%;
+    }
+}
