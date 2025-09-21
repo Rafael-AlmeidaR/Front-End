@@ -161,9 +161,9 @@ a:hover {
     border-radius: 10px;
 }
 
-footer ul p {
+footer h3 {
     font-size: 30px;
-    margin-bottom: 0;
+    margin-bottom: -5%;
 }
 
 @media (width < 850px) {
