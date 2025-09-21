@@ -154,14 +154,29 @@ a:hover {
     color: #8a8a8a;
 }
 
+.imagem {
+    width: 250px;
+    margin-left: 40%;
+    margin-bottom: 5%;
+    border-radius: 10px;
+}
+
+
 @media (width < 850px) {
     h2 {
         margin-left: 35%;
+    }
+    .imagem {
+        margin-left: 30%;
     }
 }
 
 @media (width < 500px) {
     h2 {
         margin-left: 25%;
+    }
+    .imagem {
+        width: 200px;
+        margin-left: 15%;
     }
 }

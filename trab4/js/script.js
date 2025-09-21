@@ -21,6 +21,13 @@ function verifica(answer)
         p0.innerHTML = textos[answer[0]+1];
         container.appendChild(p0);
 
+        let img = document.createElement("img");
+        if(Number(answer[0])+1 != 2)
+            img.src = "img/imagem"+(Number(answer[0])+1)+".webp";
+        img.className = "imagem"
+        
+        container.appendChild(img);
+        containerB.appendChild(container);
         
         let b = document.createElement("button");
         b.innerHTML = "Continuar";
@@ -28,8 +35,6 @@ function verifica(answer)
         b.id = 'b0'+(answer[0]+1)
         b.className = "continue"
         container.appendChild(b);
-
-        containerB.appendChild(container)
 
         document.querySelector("#p"+answer[0]+"r"+answer[1]).style.background = "green";
 
@@ -46,12 +51,10 @@ function verifica(answer)
             wrongButton.classList.remove('wrong-answer');
         }, 1000); 
     }
-        console.log(answer)
 }
 
 function generate(question)
 {   let bP = document.querySelector("#b0"+question);
-    console.log('b0'+question, bP)
     if(question != resposta.length)
     {   let container = document.querySelector("#quest-container");
         
