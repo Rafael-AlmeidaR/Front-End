@@ -19,6 +19,10 @@ function verifica(answer)
 
         let p0 = document.createElement("p");
         p0.innerHTML = textos[answer[0]+1];
+        let p1 = document.createElement("p");
+        p1.innerHTML = "Você acertou! parabéns!";
+        p1.style.color = "green";
+        container.appendChild(p1);
         container.appendChild(p0);
 
         let img = document.createElement("img");
