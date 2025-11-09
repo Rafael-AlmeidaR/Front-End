@@ -1,0 +1,125 @@
+body {
+  font-family: "Inter", Arial, sans-serif;
+  background: #f6f5f2;
+  color: #2e2e2e;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #303030;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  letter-spacing: 0.5px;
+}
+
+main {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  padding: 20px;
+  background: #fafafa;
+}
+
+legend {
+  font-weight: 600;
+  color: #303030;
+}
+
+input[type="text"],
+input[type="date"] {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: #fff;
+  font-size: 0.95rem;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus {
+  outline: none;
+  border-color: #808080;
+}
+
+#btnAlterar {
+  background: #404040;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+  width: 100%;
+}
+
+#btnAlterar:hover {
+  background: #222;
+}
+
+#list {
+  margin-top: 25px;
+}
+
+.task {
+  width: 94%;
+  border: 1px solid #ccc;
+  background: #fdfdfd;
+  color: #222;
+  border-radius: 6px;
+  margin-top: 20px;
+  padding: 10px 15px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  transition: 0.2s ease;
+}
+
+.task:hover {
+  background: #f7f7f7;
+}
+
+.task div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.task p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.task button {
+  border: none;
+  background: #c23b22;
+  color: #fff;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: 8px;
+  transition: 0.2s;
+}
+
+.task button:hover {
+  background: #a52a17;
+}
+
+.task[style*="opacity: 0.5"] div {
+  text-decoration: line-through;
+  color: #777;
+}
