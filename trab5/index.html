@@ -14,17 +14,19 @@
       <fieldset>
         <legend>Tarefa</legend>
         <label for="name">Nome Tarefa:</label>
-        <input type="text" id="name" value=""><p style="display: none; color: red;" class="error">Nome não pode ser vazio</p><br><br>
+        <input class="inp" type="text" id="name" value=""><p style="display: none; color: red;" class="error">Nome não pode ser vazio</p><br><br>
         <label for="startDate">Data de início</label>
-        <input type="date" id="startDate" value=""><p style="display: none; color: red;" class="error">Data inicial não pode ser vazia</p><br><br>
+        <input class="inp" type="date" id="startDate" value=""><p style="display: none; color: red;" class="error">Data inicial não pode ser vazia</p><br><br>
         <label for="endDate">Data do fim</label>
-        <input type="date" id="endDate" value=""><p style="display: none; color: red;" class="error">Data final não pode ser vazia</p><br><br>
+        <input class="inp" type="date" id="endDate" value=""><p style="display: none; color: red;" class="error">Data final não pode ser vazia</p><br><br>
         <label for="description">Descrição:</label>
-        <input type="text" id="description" value=""><br><br>
+        <input class="inp" type="text" id="description" value=""><br><br>
         <input type="button" id="btnAlterar" value="Adicionar nova tarefa" onclick="addTask()">
       </fieldset>
       <section id="list"></section>
-      <button id="btnLimpar" onclick="localStorage.clear(); window.location.reload()">Limpar tarefas</button>
+      <button class="btns" onclick="gravar()">Gravar tarefas</button>
+      <button class="btns" onclick="recuperar()">Recuperar tarefas</button>
+      <button class="btns" onclick="localStorage.clear(); window.location.reload()">Excluir tarefas</button>
     </main>
 <script src="js/script.js"></script>
 

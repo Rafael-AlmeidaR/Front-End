@@ -35,8 +35,7 @@ legend {
   color: #303030;
 }
 
-input[type="text"],
-input[type="date"] {
+.inp {
   width: 100%;
   padding: 8px 10px;
   margin-top: 4px;
@@ -48,8 +47,7 @@ input[type="date"] {
   font-size: 0.95rem;
 }
 
-input[type="text"]:focus,
-input[type="date"]:focus {
+.inp {
   outline: none;
   border-color: #808080;
 }
@@ -103,7 +101,7 @@ input[type="date"]:focus {
   color: #555;
 }
 
-.task button, #btnLimpar {
+.task button, .btns {
   border: none;
   background: #c23b22;
   color: #fff;
@@ -115,11 +113,10 @@ input[type="date"]:focus {
   transition: 0.2s;
 }
 
-.task button:hover, #btnLimpar:hover {
+.task button:hover, .btns:hover {
   background: #a52a17;
 }
 
-#btnLimpar {
+.btns {
   width: 100%;
-  margin-top: 5%;
 }

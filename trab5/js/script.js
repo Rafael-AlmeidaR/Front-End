@@ -1,11 +1,5 @@
-localStorage.list = localStorage.getItem("list") ? localStorage.list : "[]";
-let list = JSON.parse(localStorage.list);
-for(let i = 0; (i < list.length); i++)
-{   document.getElementById("list").innerHTML += makeHTML(list[i]);
-};
-sortList()  
 document.getElementById("startDate").value = new Date().toISOString().split('T')[0];
-
+let list = [];
 function addTask()
 {   document.querySelectorAll(".error").forEach(erro => {
         erro.style.display = "none";
@@ -18,7 +12,6 @@ function addTask()
         document.getElementById("description").value = "";
         document.getElementById("list").innerHTML += makeHTML(task);
         list.push(task);
-        localStorage.list = JSON.stringify(list);
         sortList();
     }
     else
@@ -58,7 +51,6 @@ function makeHTML(task)
 
 function Delete(id)
 {   list.splice(id, 1);
-    localStorage.list = JSON.stringify(list);
     document.getElementById("list").innerHTML = "";
     for(let i = 0; (i < list.length); i++)
     {   if(i >= id)
@@ -88,5 +80,15 @@ function sortList()
         document.getElementById("list").innerHTML += makeHTML(task);
     });
  
-    localStorage.list = JSON.stringify(list);
+}
+function recuperar()
+{   localStorage.list = localStorage.getItem("list") ? localStorage.list : "[]";
+    list = JSON.parse(localStorage.list);
+    for(let i = 0; (i < list.length); i++)
+    {   document.getElementById("list").innerHTML += makeHTML(list[i]);
+    };
+    sortList();
+}
+function gravar()
+{   localStorage.list = JSON.stringify(list);
 }
