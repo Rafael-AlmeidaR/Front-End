@@ -83,7 +83,7 @@ function sortList()
 }
 function recuperar()
 {   localStorage.list = localStorage.getItem("list") ? localStorage.list : "[]";
-    list = JSON.parse(localStorage.list);
+    list = list.concat(JSON.parse(localStorage.list));
     for(let i = 0; (i < list.length); i++)
     {   document.getElementById("list").innerHTML += makeHTML(list[i]);
     };
