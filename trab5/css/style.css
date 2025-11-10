@@ -103,7 +103,7 @@ input[type="date"]:focus {
   color: #555;
 }
 
-.task button {
+.task button, #btnLimpar {
   border: none;
   background: #c23b22;
   color: #fff;
@@ -115,11 +115,11 @@ input[type="date"]:focus {
   transition: 0.2s;
 }
 
-.task button:hover {
+.task button:hover, #btnLimpar:hover {
   background: #a52a17;
 }
 
-.task[style*="opacity: 0.5"] div {
-  text-decoration: line-through;
-  color: #777;
+#btnLimpar {
+  width: 100%;
+  margin-top: 5%;
 }

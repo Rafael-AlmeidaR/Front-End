@@ -7,15 +7,31 @@ sortList()
 document.getElementById("startDate").value = new Date().toISOString().split('T')[0];
 
 function addTask()
-{   let task = new Task(document.getElementById("name").value, document.getElementById("startDate").value, document.getElementById("endDate").value, document.getElementById("description").value, list.length)
-    document.getElementById("name").value = "";    
-    document.getElementById("startDate").value = new Date().toISOString().split('T')[0];
-    document.getElementById("endDate").value = "";
-    document.getElementById("description").value = "";
-    document.getElementById("list").innerHTML += makeHTML(task);
-    list.push(task);
-    localStorage.list = JSON.stringify(list);
-    sortList()
+{   document.querySelectorAll(".error").forEach(erro => {
+        erro.style.display = "none";
+    });
+    let task = new Task(document.getElementById("name").value, document.getElementById("startDate").value, document.getElementById("endDate").value, document.getElementById("description").value, list.length)
+    if(task.name != "" && task.startDate != "" && task.endDate != "")
+    {   document.getElementById("name").value = "";    
+        document.getElementById("startDate").value = new Date().toISOString().split('T')[0];
+        document.getElementById("endDate").value = "";
+        document.getElementById("description").value = "";
+        document.getElementById("list").innerHTML += makeHTML(task);
+        list.push(task);
+        localStorage.list = JSON.stringify(list);
+        sortList();
+    }
+    else
+    {   if(task.name == "")
+        {   document.querySelectorAll(".error")[0].style.display = "inline";
+        }
+        if(task.startDate == "")
+        {   document.querySelectorAll(".error")[1].style.display = "inline";
+        }
+        if(task.endDate == "")
+        {   document.querySelectorAll(".error")[2].style.display = "inline";
+        }
+    }
 }
 
 class Task
