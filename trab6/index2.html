@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APIs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>3 APIZONAS</h1>
+        <nav>
+            <button onclick="window.location.href = 'index.html'">API </button>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <label for="country">País pra saber a moeda: </label>
+            <input type="text" id="country" placeholder="nome do pais em inglês"><br>
+            <button onclick="moeda()">ver moeda</button>
+            <p id="countryT"></p>
+        </div>
+        <div>
+            <label for="cotacaoI1">primeira moeda:</label>
+            <input type="text" id="cotacaoI1" placeholder="usd"><br>
+            <label for="cotacaoI1">segunda moeda:</label>
+            <input type="text" id="cotacaoI2" placeholder="BRL"><br>
+            <button onclick="cotacao()">ver cotação</button>
+            <p id="cotacaoT"></p>
+        </div>
+        <div>
+            <label for="year">Ano:</label>
+            <input type="number" id="year"><br>
+            <button onclick="feriado(1)">gerar em ano específico</button><br>
+            <button onclick="feriado(0)">gerar no ano atual</button>
+            <p id="feriados"></p>
+        </div>
+    </main>
+    <script>
+        let totalBts = 0;
+        document.querySelector("button").setAttribute("disabled", "");
+        //https://restcountries.com/v3.1/name/brazil usar pra ver moeda, tem um objeto currencies que tem uma variavel que o nome dela é a moeda
+        function moeda()
+        {   fetch(`https://restcountries.com/v3.1/name/${document.getElementById("country").value}`).then(resp => {
+                resp.json().then(resp => {
+                    document.getElementById("countryT").innerHTML = Object.keys(resp[0].currencies)[0];
+                    console.log(Object.keys(resp[0].currencies)[0])
+                    totalBts++;
+                    validarBtt();
+                }).catch(error => document.getElementById("countryT").innerHTML = "põe algo válido paezão!");
+            }).catch(error => document.getElementById("countryT").innerHTML = "deu ruim internet!");
+            
+        } 
+        
+        function cotacao()
+        {  fetch(`https://economia.awesomeapi.com.br/last/${document.getElementById("cotacaoI1").value.toUpperCase()}-${document.getElementById("cotacaoI2").value.toUpperCase()}`).then(resp => {
+            resp.json().then(resp => {
+                    document.getElementById("cotacaoT").innerHTML = resp[document.getElementById("cotacaoI1").value.toUpperCase()+document.getElementById("cotacaoI2").value.toUpperCase()].ask;
+                    totalBts++;
+                    validarBtt();
+                }).catch(error => document.getElementById("cotacaoT").innerHTML = "põe algo válido paezão!")
+            }).catch(error => document.getElementById("cotacaoT").innerHTML = "deu ruim internet!")
+        }
+
+        function feriado(atual)
+        {   fetch(`https://brasilapi.com.br/api/feriados/v1/${!atual ? new Date().getFullYear() : document.getElementById("year").value ? document.getElementById("year").value : 0}`).then(resp => {
+                resp.json().then(resp => {
+                    document.getElementById("feriados").innerHTML = "";
+                    resp.forEach(feriado => {
+                        document.getElementById("feriados").innerHTML += `feriado: ${feriado.name} <br> data: ${feriado.date} <br>`;
+                    });
+                    totalBts++;
+                    validarBtt();
+                }).catch(error => document.getElementById("feriados").innerHTML = "põe algo válido paezão!")
+            }).catch(error => document.getElementById("feriados").innerHTML = "deu ruim internet!")
+        }
+        
+        function validarBtt()
+        {   if(totalBts >= 3)
+                document.querySelector("button").removeAttribute('disabled');
+        }
+
+    </script>
+</body>
+</html>

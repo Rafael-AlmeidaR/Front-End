@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APIs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>APIZONA</h1>
+        <nav>
+            <button onclick="window.location.href = 'index2.html'" disabled>3 APIs</button>
+        </nav>
+    </header>
+    <main>
+        <button onclick="randomFox()">gerar!</button>
+        <div id="fox"></div>
+    </main>
+    <script>
+        function randomFox()
+        {   let div = document.getElementById("fox");
+            fetch("https://randomfox.ca/floof/?ref=apilist.fun").then(response => {
+                response.json().then(resp => div.innerHTML = `<img src="${resp.image}" height="400"></img>`, document.querySelector("button").removeAttribute('disabled')).catch(error => div.innerHTML = error)
+            }).catch(error => div.innerHTML = error);
+        }
+         
+    </script>
+</body>
+</html>
