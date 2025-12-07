@@ -14,14 +14,18 @@
         </nav>
     </header>
     <main>
+        <p>Use as 3 partes do site pra desbloquear o acesso ao outro site</p>
         <div>
             <label for="country">País pra saber a moeda: </label>
+            <p>Digite o nome de um país em inglês e vamos informar qual é o código internacional da moeda oficial do país.</p>
             <input type="text" id="country" placeholder="nome do pais em inglês"><br>
             <button onclick="moeda()">ver moeda</button>
             <p id="countryT"></p>
         </div>
         <div>
+            <p>Coloque ocódigo internacional de duas moedas para descobrir a sua cotação.</p>
             <label for="cotacaoI1">primeira moeda:</label>
+            <p></p>
             <input type="text" id="cotacaoI1" placeholder="usd"><br>
             <label for="cotacaoI1">segunda moeda:</label>
             <input type="text" id="cotacaoI2" placeholder="BRL"><br>
@@ -29,7 +33,8 @@
             <p id="cotacaoT"></p>
         </div>
         <div>
-            <label for="year">Ano:</label>
+            <label for="year">Férias nacionais:</label>
+            <p>Digite um ano que deseja ou pegue no ano Atual e descubra todas as férias nacionais desse ano!</p>
             <input type="number" id="year"><br>
             <button onclick="feriado(1)">gerar em ano específico</button><br>
             <button onclick="feriado(0)">gerar no ano atual</button>
