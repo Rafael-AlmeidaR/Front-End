@@ -22,7 +22,7 @@
         function randomFox()
         {   let div = document.getElementById("fox");
             fetch("https://randomfox.ca/floof/?ref=apilist.fun").then(response => {
-                response.json().then(resp => div.innerHTML = `<img src="${resp.image}" height="400"></img>`, document.querySelector("button").removeAttribute('disabled')).catch(error => div.innerHTML = error)
+                response.json().then(resp => div.innerHTML = `<img src="${resp.image}" alt="imagem de raposa." height="400"></img>`, document.querySelector("button").removeAttribute('disabled')).catch(error => div.innerHTML = error)
             }).catch(error => div.innerHTML = "erro de conexão");
         }
          
